@@ -29,3 +29,17 @@ I can say that every method has some benefits:
 * more understandable program with known types when using `encoding/json` library;
 * `buger/jsonparser` allows to work with JSON-data in functional style;
 * `Jeffail/gabs` allows to work in imperative form and gives many syntactic sugar: `Exists`, `Search` and `SearchP` methods etc.
+
+### Benchmarks
+Without `fmt`:
+```
+2017/05/03 19:17:20 Source: Jsonparser; Duration: 18746235373
+2017/05/03 19:17:20 Source: Standard; Duration: 30579618969
+2017/05/03 19:17:20 Source: Gabs; Duration: 43223388987
+```
+With `fmt`:
+```
+2017/05/03 19:27:29 Library: buger/sonparser; Duration: 229121313757
+2017/05/03 19:27:29 Library: encoding/json; Duration: 230080992073
+2017/05/03 19:27:29 Library: jeffail/gabs; Duration: 292818584169
+```
